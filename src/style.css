@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700'); 
+   
+   html {
+      min-height: 100%;
+    }
+  
+    .titlebar {
+      -webkit-app-region: drag;
+      position: absolute;
+      width: 100%;
+      top:0px;
+      height: 30px;
+      background:rgb(9, 52, 112);
+    }
+    
+    #title {
+      position: relative;
+      top: 1.3px;
+      left: 14px;
+      font-weight: bold;
+      font-size: large;
+      font-family: 'Exo', sans-serif;
+      background-image: linear-gradient(rgb(108, 205, 250), rgb(225, 230, 241));
+      background-size: 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-text-fill-color: transparent;
+    }
+
+    #minimize {
+      margin: none;
+      cursor: pointer;
+      border: none;
+      background-image: linear-gradient(rgb(108, 205, 250), rgb(225, 230, 241));
+      background-size: 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-text-fill-color: transparent;
+      font-size: large;
+      position: relative;
+      top: 2px;
+      left: 722px;
+      font-weight: bold;
+      font-family: 'Exo', sans-serif;
+    }
+
+    #exit {
+      margin: none;
+      cursor: pointer;
+      border: none;
+      background-image: linear-gradient(rgb(108, 205, 250), rgb(225, 230, 241));
+      background-size: 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-text-fill-color: transparent;
+      font-size: large;
+      position: relative;
+      top: 2px;
+      left: 717px;
+      font-weight: bold;
+      font-family: 'Exo', sans-serif;
+    }
+
+    button {
+      -webkit-app-region: no-drag;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(300deg, #08129e, #676aeb);
+      transition: 0.5s;
+    }
+
+    #addpicture {
+      border: none;
+      position: absolute;
+      top: 104px;
+      left: 510px;
+      width: 34px;
+      height: 34px;
+      background-color: #eee;
+      border-right: inset rgba(25, 25, 27, 0.5);
+      border-bottom: inset rgba(25, 25, 27, 0.5);
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+    }
+
+    #addpicture:hover {
+      background-color: #ddd;
+    }
+
+    #post {
+      border: none;
+      position: absolute;
+      top: 70px;
+      left: 510px;
+      width: 34px;
+      height: 34px;
+      background-color: #eee;
+      border-right: inset rgba(25, 25, 27, 0.5);
+      border-top: inset rgba(25, 25, 27, 0.5);
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+    }
+
+    #post:hover {
+      background-color: #ddd;
+    }
+    
+    
+    #save {
+      border: none;
+      position: absolute;
+      top: 298px;
+      left: 510px;
+      width: 34px;
+      height: 34px;
+      background-color: #eee;
+      border-right: inset rgba(25, 25, 27, 0.5);
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+    }
+
+    #save:hover {
+      background-color: #ddd;
+    }
+
+    #clear {
+      border: none;
+      position: absolute;
+      top: 264px;
+      left: 510px;
+      width: 34px;
+      height: 34px;
+      background-color: #eee;
+      border-right: inset rgba(25, 25, 27, 0.5);
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+    }
+    #clear:hover {
+      background-color: #ddd;
+    }
+
+    #debug {
+      border: none;
+      position: absolute;
+      top: 230px;
+      left: 510px;
+      width: 34px;
+      height: 34px;
+      background-color: #eee;
+      border-top: inset rgba(25, 25, 27, 0.5);
+      border-right: inset rgba(25, 25, 27, 0.5);
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+    }
+    #debug:hover {
+      background-color: #ddd;
+    }
+
+    #update {
+      border: none;
+      position: absolute;
+      top: 366px;
+      left: 510px;
+      width: 34px;
+      height: 34px;
+      background-color: #eee;
+      border-bottom: inset rgba(25, 25, 27, 0.5);
+      border-right: inset rgba(25, 25, 27, 0.5);
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+    }
+    #update:hover {
+      background-color: #ddd;
+    }
+
+    #crossfollow {
+      visibility: hidden;
+      border: none;
+      width: 34px;
+      height: 34px;
+      background-color: #eee;
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+    }
+    #crossfollow:hover {
+      background-color: #ddd;
+    }
+
+    #deletetweet {
+      visibility: hidden;
+      border: none;
+      width: 34px;
+      height: 34px;
+      background-color: #eee;
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+    }
+
+    #deletetweet:hover {
+      background-color: #ddd;
+    }
+
+    #delete_tweet {
+      visibility: hidden;
+      border: #eee;
+    }
+
+    #logstats {
+      border: none;
+      position: absolute;
+      top: 332px;
+      left: 510px;
+      width: 34px;
+      height: 34px;
+      background-color: #eee;
+      border-right: inset rgba(25, 25, 27, 0.5);
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+    }
+    #logstats:hover {
+      background-color: #ddd;
+    }
+
+    #link {
+      visibility: hidden;
+      position: absolute;
+      top: 100px;
+      border: none;
+      background-color: #eee;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;;
+      font-size: 11px;
+      padding: 0.7em 1.2em;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #link:hover {
+      cursor: alias;
+      background-color: #ddd;
+    }
+
+    .modepicker {
+      visibility: hidden;
+      font-size: medium;
+      position: absolute;
+      top: 600px;
+      left: 600px;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .modepicker select {
+      background-color: #eee;
+      color: rgb(0, 0, 0);
+      font-size: inherit;
+      padding: .5em;
+      padding-right: 2em;	
+      border: 0;
+      margin: 0;
+      border-radius: 3px;
+      text-indent: 0.01px;
+      text-overflow: '';
+    }
+
+    .modepicker::before,
+    .modepicker::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+    }
+    
+    .modepicker::before { /*  Custom dropdown arrow cover */
+      width: 1.2em;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 0 3px 3px 0;
+    }
+    
+    .modepicker::before {
+      background-color: rgba(0,0,0,.15);
+    }
+    
+    .modepicker::after {
+      color: rgba(0,0,0,.4);
+    }
+
+
+    #logWindow {
+      box-sizing: border-box;
+      padding: 7px;
+      position: absolute;
+      overflow: auto;
+      border-style: inset;
+      border-radius: 2.6%;
+      border-color: rgba(25, 25, 27, 0.5);
+      top: 210px;
+      left: 20px;
+      width: 490px;
+      height: 520px;
+      background-color: #eee;
+      z-index: 20;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 16px;
+      transition: 0.5s;
+    }
+
+    #textbox {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background-color: #eee;
+      border-radius: 4%;
+      width: 464px;
+      height: 100px;
+      padding: 6px 10px;
+      border: inset 3px rgba(25, 25, 27, 0.5);
+      resize: none;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: medium;
+    }
+
+    #textbox:focus{
+      outline: none;
+    }
+
+    #statsWindow {
+      position: absolute;
+      overflow: auto;
+      border-style: inset;
+      text-align: center;
+      border-color: rgba(25, 25, 27, 0.5);
+      border-radius: 4.25%;
+      top: 234px;
+      left: 579px;
+      width: 260px;
+      height: 150px;
+      background-color: #eee;
+      z-index: 20;
+      transition: 0.5s;
+    }
+
+    .stats_font {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: medium;
+      margin-top: 9px;
+      margin-bottom: 6px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .stats_number {
+      font-size: medium;
+      font-weight: bold;
+    }

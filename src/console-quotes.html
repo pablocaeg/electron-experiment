@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      const {ipcRenderer} = require('electron');
+      function saveDoc(filename, elId, mimeType) {
+        
+        var elHtml = document.getElementById(elId).textContent;
+        var link = document.createElement('a');
+        mimeType = mimeType || 'text/plain';
+
+        link.setAttribute('download', filename);
+        link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+        link.click(); 
+      }
+
+      function clearBox(elementID) {
+          const logger = document.getElementById("logger");
+          document.getElementById(elementID).innerHTML = "";
+          document.getElementById(elementID).insertAdjacentElement('afterbegin', logger)
+      }
+
+      function schedule(selectedValue){
+        if (selectedValue == "Modo publicación") {
+          set_loop("post", follow_time, unfollow_time, like_time, stats_time, ftf_ratio);
+        } else if (selectedValue == "Modo normal") {
+          set_loop("standard", follow_time, unfollow_time, like_time, stats_time, ftf_ratio);
+        } else if (selectedValue == "Modo seguimiento") {
+          set_loop("follow", follow_time, unfollow_time, like_time, stats_time, ftf_ratio);
+        } else if (selectedValue == "Modo purga") {
+          set_loop("purge", follow_time, unfollow_time, like_time, stats_time, ftf_ratio);
+        }
+      }
+
+      d = new Date();
+      datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+    </script>
+    <script defer src="twitter-frases.js"></script>
+  </head>
+  <body onload= "get_stats()">
+     <div class="titlebar">
+      <span id="title">twitterbot</span>
+      <button id="minimize" onclick="ipcRenderer.send('minimize')">—</button>
+      <button id="exit" onclick="ipcRenderer.send('close')">X</button>
+     </div>
+    <input id="delete_tweet" type="text">
+    <a target="_blank" href="https://twitter.com/ParaPensarBot/status/" id="link">Last tweet</a>
+    <button id="deletetweet" onclick="deleteTweet()" title="Cancel Retweet">❌</button>
+    <button id="clear" onclick="clearBox('logWindow')" title="Clear console">🧹</button>
+    <button id="update" title="Update Stats">⚙️</button>
+    <button id="debug" title="Debug Mode">❗</button>
+    <button id="crossfollow" onclick="cross_follow()" title="Cross Follow">🔀</button>
+    <button id="save" onclick = "saveDoc(datestring + '-log.txt','logWindow')" title="Save Console to PDF">💾</button>
+    <button id="logstats" title="Stats to Console">🖨️</button>
+    <span class="modepicker">
+      <select onchange="schedule(this.value)">    
+          <option>Modo normal</option>
+          <option>Modo seguimiento</option>  
+          <option>Modo purga</option>
+          <option>Modo publicación</option>
+      </select>
+    </span>
+    <form>
+      <textarea id="textbox"></textarea>
+    </form>
+    <button id="addpicture" title="Add picture">📷</button>
+    <button id="post" title="Post tweet">✉️</button>
+    <div id="logWindow">
+        <pre id="logger"></pre>
+    </div>
+    <div id="statsWindow">
+      <pre class="stats_font">Followers: <span id="followers" class="stats_number"></span><hr></pre>
+      <pre class="stats_font">Follows: <span id="following" class="stats_number"></span></span><hr></pre>
+      <pre class="stats_font">Friend-to-follower ratio: <span id="friendtofollow" class="stats_number"></span><hr></pre>
+      <pre class="stats_font">Process uptime: <span id="processup" class="stats_number"></span></pre>
+    </div>
+    <div id="configWindow">
+
+    </div>
+  </body>
+</html> 

@@ -1,0 +1,295 @@
+
+          @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+          *{
+              margin: 0px;
+              padding: 0px;
+          }
+
+          .titlebar {
+            height: 30px;
+            -webkit-app-region: drag;
+            background:rgb(9, 52, 112);
+          }
+
+          #title {
+            position: relative;
+            top: 1.5px;
+            left: 14px;
+            font-weight: bold;
+            font-size: large;
+            font-family: 'Exo', sans-serif;
+            background-image: linear-gradient(rgb(108, 205, 250), rgb(225, 230, 241));
+            background-size: 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+          }
+
+          .twitter_frame {  
+            max-width: 30%;  
+            height: auto;  
+            border-radius: 100%;
+            border: solid rgb(25, 100, 204) 2px;
+            margin-left: 30%;
+            }  
+
+          body{
+              font-family: 'Exo', sans-serif;
+          }
+
+          .context {
+              width: 100%;
+              position: absolute;
+              top: 8.5%;
+          }
+
+          .context h1{
+              text-align: center;
+              background-image: radial-gradient(#18ecff, #42b1ec);
+              -webkit-text-stroke-width: 1.5px;
+              -webkit-text-stroke-color: rgb(255, 255, 255);
+              font-size: 75px;
+              background-color: #18ecff;
+              background-image: radial-gradient(#18ecff, #42b1ec);
+              background-size: 100%;
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent; 
+              -moz-text-fill-color: transparent;
+          }
+
+          .context h4{
+              text-align: center;
+              background-image: radial-gradient(#18ecff, #42b1ec);
+              -webkit-text-stroke-width: 0.5px;
+              -webkit-text-stroke-color: rgb(255, 255, 255);
+              font-size: 28px;
+              background-color: #18ecff;
+              background-image: radial-gradient(#22e5f7, #33acee);
+              background-size: 100%;
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent; 
+              -moz-text-fill-color: transparent;
+          }
+
+          .area{
+              background: rgba(21, 73, 214, 0.856);
+              width: 100%;
+              height: 100vh;            
+          }
+
+          .circles{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+          }
+
+          .circles li{
+              position: absolute;
+              display: block;
+              list-style: none;
+              width: 20px;
+              height: 20px;
+              background: rgba(104, 183, 196, 0.76);
+              animation: animate 25s linear infinite;
+              bottom: -150px;
+              
+          }
+
+          .circles li:nth-child(1){
+              left: 25%;
+              width: 80px;
+              height: 80px;
+              animation-delay: 0s;
+          }
+
+
+          .circles li:nth-child(2){
+              left: 10%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 2s;
+              animation-duration: 12s;
+          }
+
+          .circles li:nth-child(3){
+              left: 70%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 4s;
+          }
+
+          .circles li:nth-child(4){
+              left: 40%;
+              width: 60px;
+              height: 60px;
+              animation-delay: 0s;
+              animation-duration: 18s;
+          }
+
+          .circles li:nth-child(5){
+              left: 65%;
+              width: 20px;
+              height: 20px;
+              animation-delay: 0s;
+          }
+
+          .circles li:nth-child(6){
+              left: 75%;
+              width: 110px;
+              height: 110px;
+              animation-delay: 3s;
+          }
+
+          .circles li:nth-child(7){
+              left: 35%;
+              width: 150px;
+              height: 150px;
+              animation-delay: 6s;
+          }
+
+          .circles li:nth-child(8){
+              left: 50%;
+              width: 25px;
+              height: 25px;
+              animation-delay: 15s;
+              animation-duration: 30s;
+          }
+
+          .circles li:nth-child(9){
+              left: 20%;
+              width: 15px;
+              height: 15px;
+              animation-delay: 2s;
+              animation-duration: 22s;
+          }
+
+          .circles li:nth-child(10){
+              left: 85%;
+              width: 150px;
+              height: 150px;
+              animation-delay: 0s;
+              animation-duration: 11s;
+          }
+
+          @keyframes animate {
+
+              0%{
+                  transform: translateY(0) rotate(0deg);
+                  opacity: 1;
+                  border-radius: 0;
+              }
+
+              100%{
+                  transform: translateY(-1000px) rotate(720deg);
+                  opacity: 0;
+                  border-radius: 50%;
+              }
+
+          }
+
+          input[type="submit" i]:hover {
+            cursor: pointer;
+            background-color: rgba(129, 187, 216, 0.735);
+          }
+
+          input[type="submit" i] {
+            appearance: auto;
+            user-select: none;
+            white-space: pre;
+            align-items: flex-start;
+            text-align: center;
+            cursor: pointer;
+            box-sizing: border-box;
+            background-color: rgba(168, 220, 247, 0.735);
+            padding: 7px 12px;
+            border-radius: 8px;
+            border-width: 0.5px;
+            border-style: solid;
+            border-color: rgb(93, 113, 160);
+          }
+
+          #to_dual {
+            position: relative;
+            color: rgb(0, 42, 100);
+            font-family: 'Exo', sans-serif;
+            top: 100px;
+          }
+          
+          #to_animals {
+              position: relative;
+              color: rgb(0, 42, 100);
+              font-family: 'Exo', sans-serif;
+              top: 100px;
+
+          }
+          #to_quotes {
+              position: relative;
+              color: rgb(0, 42, 100);
+              font-family: 'Exo', sans-serif;
+              top: 100px;
+          }
+
+          /* CARDS */
+          
+          .cards {
+            position: relative;
+            top: 35%;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+          
+          .card {
+            margin: 25px;
+            padding: 20px;
+            width: 170px;
+            height: 190px;
+            display: grid;
+            grid-template-rows: 20px 50px 1fr 50px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+            transition: all 0.2s;
+          }
+          
+          .card:hover {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            transform: scale(1.01);
+          }
+          
+          .card__title {
+            -webkit-text-stroke-width: 0.3px;
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+            grid-row: 3/4;
+            font-weight: 600;
+            color: rgb(25, 100, 204);
+          }
+          
+          /* CARD BACKGROUNDS */
+          
+          .card-1 {
+            background: linear-gradient(to right, #18ecff 40%, #42b1ec);
+          }
+
+          .card-2 {
+              background: #2dcef5;
+          }
+
+          .card-3 {
+            background: linear-gradient(to left, #18ecff 40%, #42b1ec);
+          }
+          
+          /* RESPONSIVE */
+          
+          @media (max-width: 1600px) {
+            .cards {
+              justify-content: center;
+            }
+          }
